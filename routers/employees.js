@@ -7,6 +7,7 @@ router.get('/',async(req,res)=>{
 try{
   const employes= await Employee.find()
   res.json(employes)
+  123
 }
 catch(err){
     res.send('found error'+err)
