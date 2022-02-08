@@ -6,6 +6,14 @@ const Employee=require('../models/employee')
 router.get('/',async(req,res)=>{
 try{
   const employes= await Employee.find()
+  var name= req.query.name;
+  var date1=Date.parse('Wed, 09 Aug 1995 00:00:00 GMT');
+  var dd=  new Date(date1);
+  var c= dd.toLocaleDateString();
+  if(typeof name !=='undefined'){
+      if(name=="test")
+      console.log(name);
+  }
   res.json(employes)
   
 }
