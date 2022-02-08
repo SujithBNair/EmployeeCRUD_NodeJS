@@ -17,7 +17,7 @@ app.use(express.json())
 const employeeRouter=require('./routers/employees')
 app.use('/employee',employeeRouter)
 
-// start the server and listen the port 9000
+/// start the server and listen the port 9000
 app.listen(9000,()=>{
     console.log('server started..');
 })
